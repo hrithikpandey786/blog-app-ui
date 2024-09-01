@@ -1,0 +1,20 @@
+$primary-color: #41B3A2; 
+
+.footer {
+    background-color: $primary-color;
+    color: white;
+    // text-align: center;
+    // padding: auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    height: 25px;
+
+    p{
+      font-size: 15px;
+    }
+  }
+  

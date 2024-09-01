@@ -1,0 +1,35 @@
+/* 
+*{
+    color: #4caf50;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+} */
+
+$primary-color: #3498db; // A calming blue for primary elements
+$secondary-color: #ecf0f1; // A light grayish-white for background
+$dark-text-color: #2c3e50; // Dark gray for text
+$light-border-color: #bdc3c7; // Light gray for borders
+$font-family: 'Arial, sans-serif';
+
+body {
+  font-family:'Arial, sans-serif';
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  // height: 100%;
+  
+}
+
+a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+
+
+// .container {
+//   width: 80%;
+//   margin: 0 auto;
+//   padding: 20px 0;
+// }
+
