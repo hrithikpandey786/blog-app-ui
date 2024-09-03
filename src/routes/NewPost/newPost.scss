@@ -13,6 +13,30 @@ form {
     max-width: 600px;
     margin: 30px auto;
 
+    .category-dropdown{
+      // background-color: red;
+      width: 100%;
+      // margin-left: 550px;
+      margin: 5px 0px;
+
+      select{
+        border-radius: 5px;
+        border: 1px solid lightgray;
+        font-size: 15px;
+        padding:4px;
+        background-color: white;
+
+        option:checked {
+          background-color: #41B3A2; /* Custom background color for the selected option */
+          color: black; /* Text color for the selected option */
+        }
+      
+        option{
+          border-radius: 5px;
+        }
+      }
+    }
+
     .btn {
       padding: 8px;
       border: none;

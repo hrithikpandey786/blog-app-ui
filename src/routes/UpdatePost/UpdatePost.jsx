@@ -24,6 +24,8 @@ const UpdatePost = () => {
     const stringArray = content.split(' ');
     const extractedString = stringArray.slice(0, 30);
     const excerpt = extractedString.join(' ');
+    const category = new FormData(e.target).get("options");
+    console.log(category);
 
     try{
       const updatedPost = await axios.put(`${import.meta.env.VITE_API_URL}/api/post/update/${id}`, {
@@ -32,9 +34,10 @@ const UpdatePost = () => {
         content: content,
         image: imageUrl,
         postedBy: postedBy,
+        category: category,
         userId: userId
       })
-
+      console.log(updatedPost)
       navigate("/");    
     } catch(err){
       console.log(err);
@@ -72,6 +75,22 @@ const UpdatePost = () => {
         onChange={(e) => setTitle(e.target.value)}
         required
       />
+
+        <div className='category-dropdown'>
+          {/* <label for="dropdown">Select: </label> */}
+          <select id="dropdown" name="options">
+          <option value="" disabled selected>Category</option>
+            <option value="Personal Blogs">Personal Blogs</option>
+            <option value="Business/Corporate Blogs"> Business/Corporate Blogs</option>
+            <option value="Fashion Blogs">Fashion Blogs</option>
+            <option value="Blog Newsletters">Blog Newsletters</option>
+            <option value="Lifestyle Blogs">Lifestyle Blogs</option>
+            <option value="Travel Blogs">Travel Blogs</option>
+            <option value="Food Blogs">Food Blogs</option>
+            <option value="Affiliate/Review Blogs">Affiliate/Review Blogs</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
 
       <div>
         <label>Upload Image:</label>

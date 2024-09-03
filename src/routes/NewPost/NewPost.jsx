@@ -19,7 +19,7 @@ const NewPost = () => {
     const stringArray = content.split(' ');
     const extractedString = stringArray.slice(0, 30);
     const excerpt = extractedString.join(' ');
-    console.log(imageUrl);
+    const category = new FormData(e.target).get("options");
 
     try{
       const newPost = await axios.post(`${import.meta.env.VITE_API_URL}/api/post/add`, {
@@ -28,10 +28,11 @@ const NewPost = () => {
         content: content,
         userId: currentUser.id,
         postedBy: currentUser.name,
-        image: imageUrl || ""
+        image: imageUrl || "",
+        category: category
       })
 
-      console.log(newPost.data); 
+      // console.log(newPost.data); 
       navigate("/");   
     } catch(err){
       console.log(err);
@@ -82,6 +83,22 @@ const NewPost = () => {
           <img src={selectedImage} alt="Preview" width="100" height="100" />
         </div>
       )} */}
+
+        <div className='category-dropdown'>
+          {/* <label for="dropdown">Select: </label> */}
+          <select id="dropdown" name="options">
+          <option value="" disabled selected>Category</option>
+            <option value="Personal Blogs">Personal Blogs</option>
+            <option value="Business/Corporate Blogs"> Business/Corporate Blogs</option>
+            <option value="Fashion Blogs">Fashion Blogs</option>
+            <option value="Blog Newsletters">Blog Newsletters</option>
+            <option value="Lifestyle Blogs">Lifestyle Blogs</option>
+            <option value="Travel Blogs">Travel Blogs</option>
+            <option value="Food Blogs">Food Blogs</option>
+            <option value="Affiliate/Review Blogs">Affiliate/Review Blogs</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
 
       <div>
         <label>Upload Image(Optional):</label>

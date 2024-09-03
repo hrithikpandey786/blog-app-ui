@@ -10,8 +10,9 @@ $font-family: 'Arial, sans-serif';
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-y:hidden;
+    overflow:hidden;
     // height: 100%;
+    width: 100%;
     gap: 10px;
     // background-color: red;
     // gap: 30px;
@@ -24,6 +25,29 @@ $font-family: 'Arial, sans-serif';
       padding: 0px 400px 10px 400px;
       border-bottom: 1px solid lightgray; 
       margin-bottom: 15px;
+    }
+
+    .category-dropdown{
+      // background-color: red;
+      width: 100%;
+      margin-left: 550px;
+
+      select{
+        border-radius: 5px;
+        border: 1px solid lightgray;
+        font-size: 15px;
+        padding:4px;
+        background-color: white;
+
+        option:checked {
+          background-color: #41B3A2; /* Custom background color for the selected option */
+          color: black; /* Text color for the selected option */
+        }
+      
+        option{
+          border-radius: 5px;
+        }
+      }
     }
   
     p {
