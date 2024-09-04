@@ -2,6 +2,7 @@ import React from "react";
 import "./signupPage.scss";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 
 export default function SignUpPage(){
@@ -91,6 +92,8 @@ export default function SignUpPage(){
                 <div className="submit-btn">
                 <button type="submit" className="btn" disabled={isDisable}>Register</button>
                 </div>
+
+                <span className="link"><Link to="/login">Do you have an account?</Link></span>
                 {error && <span>{error.message}</span>}
             </form>
         </div>

@@ -17,7 +17,7 @@ const BlogList = () => {
       // console.log(posts);
       setPosts(posts.data);
     } catch(err){
-      console.log(err.response.data);
+      console.log(err);
     }
   }
 

@@ -46,7 +46,8 @@ $secondary-color: #ecf0f1;
             justify-content: flex-end;
             // background-color: red;
             width: 80%;
-            margin: 10px;
+            margin: 10px 10px 0px 10px;
+    
             button{
                 padding: 7px 15px;
                 // width: 100%;
@@ -55,6 +56,15 @@ $secondary-color: #ecf0f1;
                     cursor: not-allowed;
                 }
             }
+        }
+
+
+        .link{
+            // background-color: red;
+            font-size: 14px;
+            color: gray;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
         }
 
         span{

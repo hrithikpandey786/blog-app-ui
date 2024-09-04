@@ -3,6 +3,8 @@ import "./loginPage.scss";
 import axios from "axios";
 import { AuthContext } from "../../../context/AuthContext.jsx";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+
 
 export default function LoginPage(){
     const [imageUrl, setImageUrl] = React.useState(null);
@@ -77,6 +79,8 @@ export default function LoginPage(){
                 <div className="submit-btn">
                 <button type="submit" className="btn" disabled={isDisable}>Login</button>
                 </div>
+                
+                <span className="link"><Link to="/signup">Don't you have an account?</Link></span>
                 {error && <span>{error.message}</span>}
             </form>
         </div>
