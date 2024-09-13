@@ -14,6 +14,8 @@ export default function Card({post}){
     const [numberOfLikes, setNumberOfLikes] = React.useState(post.likes.length);
     const [isDisable, setIsDisable] = React.useState(false);
     const [liked, setLiked] = React.useState((currentUser && post.likes.includes(currentUser.id))?true:false);
+    
+    
     async function handleDelete(){
         setError("");
         setIsDisable(true);
@@ -21,7 +23,8 @@ export default function Card({post}){
         try{
             const deletedPost = await axios.delete(`${import.meta.env.VITE_API_URL}/api/post/delete/${post.id}`);
             // console.log(deletedPost.data);
-            navigate("/");
+            // navigate("/");
+            window.location.reload();
         } catch(err){
             console.log(err);
             setError(err.response.data);
