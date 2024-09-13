@@ -11,10 +11,11 @@ export default function Card({post}){
     const [isImageExist, setIsImageExist] = React.useState(post.image?true:false);
     const navigate = useNavigate();
     const {currentUser} = React.useContext(AuthContext);
-    const [liked, setLiked] = React.useState(post.likes.includes(currentUser && currentUser.id)?true:false);
+    console.log(post.likes);
+    
     const [numberOfLikes, setNumberOfLikes] = React.useState(post.likes.length);
     const [isDisable, setIsDisable] = React.useState(false);
-
+    const [liked, setLiked] = React.useState(post.likes.includes(currentUser && currentUser.id)?true:false);
     async function handleDelete(){
         setError("");
         setIsDisable(true);
