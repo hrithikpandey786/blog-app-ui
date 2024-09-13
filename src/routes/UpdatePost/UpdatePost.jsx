@@ -24,20 +24,17 @@ const UpdatePost = () => {
     const stringArray = content.split(' ');
     const extractedString = stringArray.slice(0, 30);
     const excerpt = extractedString.join(' ');
-    const category = new FormData(e.target).get("options");
-    console.log(category);
+    const category = new FormData(e.target).get("options")||"Other";
 
+    
     try{
       const updatedPost = await axios.put(`${import.meta.env.VITE_API_URL}/api/post/update/${id}`, {
         title: title,
-        excerpt: excerpt,
         content: content,
         image: imageUrl,
-        postedBy: postedBy,
-        category: category,
-        userId: userId
+        category: category
       })
-      console.log(updatedPost)
+      // console.log(updatedPost)
       navigate("/");    
     } catch(err){
       console.log(err);

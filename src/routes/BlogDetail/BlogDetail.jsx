@@ -18,7 +18,10 @@ const BlogDetail = () => {
       const fetchedPost = await axios.get(`${import.meta.env.VITE_API_URL}/api/post/${id}`);
       
       setPost(fetchedPost.data);
-      // console.log(post);
+      
+      if(!fetchedPost.data.image)
+        setIsImageExist(false);
+      
     }
 
     fetchPost();

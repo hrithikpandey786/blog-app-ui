@@ -73,24 +73,45 @@
         }
     }
 
-    .buttons{
+    .bottom-section{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
+        margin-top: 10px;
 
-        button{
-            padding: 7px;
-            color: white;
-            background-color: black;
-            border-radius: 5px;
-            cursor: pointer;
-            border: none;
-            font-size: 12px;
+        .like-section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            img{
+                height: 20px;
+                width: 20px;
+                cursor: pointer;
+            }
         }
-
-        .delete-btn{
-            background-color: red;
+        .update-section{
+            .buttons{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+        
+                button{
+                    padding: 7px;
+                    color: white;
+                    background-color: black;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    border: none;
+                    font-size: 12px;
+                }
+        
+                .delete-btn{
+                    background-color: red;
+                }
+            }
         }
     }
 

@@ -13,6 +13,8 @@ const NewPost = () => {
   const navigate = useNavigate();
   const [imageUrl, setImageUrl] = useState(null);
   const {currentUser} = React.useContext(AuthContext);
+  const [isDisable, setIsDisable] = React.useState(false);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,6 +22,7 @@ const NewPost = () => {
     const extractedString = stringArray.slice(0, 30);
     const excerpt = extractedString.join(' ');
     const category = new FormData(e.target).get("options");
+    setIsDisable(true);
 
     try{
       const newPost = await axios.post(`${import.meta.env.VITE_API_URL}/api/post/add`, {
@@ -29,7 +32,8 @@ const NewPost = () => {
         userId: currentUser.id,
         postedBy: currentUser.name,
         image: imageUrl || "",
-        category: category
+        category: category,
+        likes: []
       })
 
       // console.log(newPost.data); 
@@ -37,6 +41,8 @@ const NewPost = () => {
     } catch(err){
       console.log(err);
     }
+
+    setIsDisable(false);
   };
 
   // function handleImageChange(e){
@@ -119,7 +125,7 @@ const NewPost = () => {
         onChange={(e) => setContent(e.target.value)}
         required
       ></textarea>
-      <button type="submit" className='btn'>Add Post</button>
+      <button type="submit" className='btn' disabled={setIsDisable}>Add Post</button>
     </form>
   );
 };

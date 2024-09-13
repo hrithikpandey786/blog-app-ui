@@ -19,9 +19,10 @@ $primary-color: #3498db;
     .body{
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      // align-items: center;
 
       img{
+        padding-top: 30px;
         width: 450px;
         height: 350px;
         border-radius: 2px;
