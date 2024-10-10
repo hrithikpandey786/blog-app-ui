@@ -13,30 +13,30 @@ $font-family: 'Arial, sans-serif';
     overflow:hidden;
     // height: 100%;
     width: 100%;
-    gap: 10px;
+    gap: 0.625rem;
     // background-color: red;
     // gap: 30px;
-    padding-bottom: 35px;
+    padding-bottom: 2.1875rem;
 
     .bloglist-heading {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 35px;
-      padding: 0px 400px 10px 400px;
-      border-bottom: 1px solid lightgray; 
-      margin-bottom: 15px;
+      font-size: 2.1875rem;
+      padding: 0px 25rem 0.625rem 25rem;
+      border-bottom: 0.0625rem solid lightgray; 
+      margin-bottom: 0.9375rem;
     }
 
     .category-dropdown{
       // background-color: red;
       width: 100%;
-      margin-left: 550px;
+      margin-left: 34.375rem;
 
       select{
-        border-radius: 5px;
-        border: 1px solid lightgray;
-        font-size: 15px;
-        padding:4px;
+        border-radius: 0.3125rem;
+        border: 0.0625rem solid lightgray;
+        font-size: 0.9375rem;
+        padding: 0.25rem;
         background-color: white;
 
         option:checked {
@@ -45,13 +45,13 @@ $font-family: 'Arial, sans-serif';
         }
       
         option{
-          border-radius: 5px;
+          border-radius: 0.3125rem;
         }
       }
     }
   
     p {
-      margin: 10px 0;
+      margin: 0.625rem 0;
     }
   
     a {
@@ -60,9 +60,9 @@ $font-family: 'Arial, sans-serif';
     }
   
     .blog-post {
-      margin-bottom: 20px;
-      padding: 20px;
-      border-bottom: 1px solid #ccc;
+      margin-bottom: 1.25rem;
+      padding: 1.25rem;
+      border-bottom: 0.0625rem solid #ccc;
   
       &:hover {
         background-color: $secondary-color;

@@ -3,12 +3,12 @@ $secondary-color: #ecf0f1;
 
 
 .loginpage-container{
-    padding: 30px;
+    padding: 1.875rem;
     
     h2{
         font-family: "Roboto", sans-serif;
-        font-size: 30px;
-        margin: 0px auto;
+        font-size: 1.875rem;
+        margin: 0rem auto;
         text-align: center;
     }        
 
@@ -27,12 +27,12 @@ $secondary-color: #ecf0f1;
             justify-content: space-between;
 
             label{
-                margin: 10px;
-                font-size: 17px;
+                margin: 0.625rem;
+                font-size: 1.0625rem;
             }
             input{
-                width: 380px;
-                font-size: 15px;
+                width: 23.75rem;
+                font-size: 0.9375rem;
                 background-color: $secondary-color;
 
                 &:disabled{
@@ -46,10 +46,10 @@ $secondary-color: #ecf0f1;
             justify-content: flex-end;
             // background-color: red;
             width: 80%;
-            margin: 10px 10px 0px 10px;
+            margin: 0.625rem 0.625rem 0rem 0.625rem;
     
             button{
-                padding: 7px 15px;
+                padding: 0.4375rem 0.9375rem;
                 // width: 100%;
 
                 &:disabled{
@@ -61,7 +61,7 @@ $secondary-color: #ecf0f1;
 
         .link{
             // background-color: red;
-            font-size: 14px;
+            font-size: 0.875rem;
             color: gray;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             

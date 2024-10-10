@@ -6,25 +6,25 @@
     // font-family: "Roboto", sans-serif;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     // background-color: white;
-    border: 1px solid lightgray;
-    margin: 10px;
-    min-height: 225px;
-    width: 500px;
-    border-radius: 10px;
+    border: 0.0625rem solid lightgray;
+    margin: 0.625rem;
+    min-height: 14.0625rem;
+    width: 31.25rem;
+    border-radius: 0.625rem;
     // box-shadow: 0 0 10px 0px gray;
-    padding: 10px;
+    padding: 0.625rem;
 
     .title{
         color: black;
-        font-size: 25px;
+        font-size: 1.5625rem;
         text-align: left;
         font-weight: 600;
     }
 
     .nickname{
-        font-size: 12px;
+        font-size: 0.75rem;
         color: gray;
-        margin: 2px;
+        margin: 0.125rem;
         // height: 10x;
     }
 
@@ -32,12 +32,12 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        min-height: 100px;
+        min-height: 6.25rem;
         
         .pic{
             
-            width: 165px;
-            border-radius: 5px;
+            width: 10.3125rem;
+            border-radius: 0.3125rem;
             object-fit: cover;
         } 
 
@@ -47,14 +47,14 @@
             // text-align: justify;
             // margin-right: 5px;
             // background-color: blue;
-            width: 425px;
+            width: 26.5625rem;
             display: flex;
-            margin-right: 8px;
+            margin-right: 0.5rem;
             flex-direction: column;
 
             p{
                 text-align: justify;
-                font-size: 14px;
+                font-size: 0.875rem;
             }
             
 
@@ -64,7 +64,7 @@
                 // margin: 0px 5px 0px 300px;
                 color: #2c3e50;
                 // margin:0px 15px 0px 480px;
-                font-size: 12px;
+                font-size: 0.75rem;
             }
         }
 
@@ -77,17 +77,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 10px;
+        margin-top: 0.625rem;
 
         .like-section{
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
+            gap: 0.3125rem;
 
             img{
-                height: 20px;
-                width: 20px;
+                height: 1.25rem;
+                width: 1.25rem;
                 cursor: pointer;
             }
         }
@@ -96,16 +96,16 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                gap: 10px;
+                gap: 0.625rem;
         
                 button{
-                    padding: 7px;
+                    padding: 0.4375rem;
                     color: white;
                     background-color: black;
-                    border-radius: 5px;
+                    border-radius: 0.3125rem;
                     cursor: pointer;
                     border: none;
-                    font-size: 12px;
+                    font-size: 0.75rem;
                 }
         
                 .delete-btn{
