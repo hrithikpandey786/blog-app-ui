@@ -83,7 +83,7 @@ export default function Card({post}){
                 </div>
                 {isImageExist && <img src={post.image} alt="" className='pic'></img>}
             </div>
-            <div className="bottom-section">
+            <div className="bottom">
             <div className='like-section'>
                 {liked?<img src="/liked.png" alt="" onClick={handleLike}></img>:<img src="/unliked.png" alt="" onClick={handleLike}></img>}
                 {numberOfLikes>1 && <p>{numberOfLikes-1}</p>}
