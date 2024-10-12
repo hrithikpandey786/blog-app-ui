@@ -43,8 +43,14 @@ export default function UpdateProfile(){
         const email = searchParams.get("email");
         const password = formData.get("password");
         const avatar = imageUrl;
-
+        
+        if(!password){
+            setError("Enter the details to update!");
+            return;
+        }
+        
         try{
+            
             const updatedDetails = await axios.put(`${import.meta.env.VITE_API_URL}/api/auth/update/${id}`,{
                 name, email, password, avatar
             })
@@ -54,6 +60,7 @@ export default function UpdateProfile(){
             navigate(`/profile/${id}`);
         } catch(err){
             console.log(err);
+            setError("Failed to update the Profile!");
         }
       }
 
@@ -92,6 +99,7 @@ export default function UpdateProfile(){
                 <div className="submit-btn">
                     <button className="button">Submit</button>
                 </div>
+                {<span>{error}</span>}
             </form>
         </div>
     )
