@@ -71,6 +71,7 @@ header {
         margin: 0 0.9375rem;
         color: white;
         &:hover {
+          transition: all 0.3s ease;
           font-size: 1.25rem;
         }
       }
